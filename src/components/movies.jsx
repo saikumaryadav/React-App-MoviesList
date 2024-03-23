@@ -6,6 +6,7 @@ import ListGroup from "./common/listgroup";
 import { getGenres } from "../services/fakeGenreService";
 import MoviesTable from "./moviesTable";
 import _ from "lodash";
+import Profile from "./common/profile";
 
 class movies extends Component {
   state = {
@@ -87,11 +88,14 @@ class movies extends Component {
     return (
       <div className="row">
         <div className="col-3">
+          <br />
+          <br />
           <ListGroup
             items={this.state.genres}
             selectedItem={this.state.selectedGenre}
             onItemSelect={this.handleGenreSelect}
           />
+          <Profile></Profile>
         </div>
 
         <div className="col">
